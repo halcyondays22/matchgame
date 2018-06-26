@@ -34,7 +34,13 @@ MatchGame.generateCardValues = function () {
 */
 
 MatchGame.renderCards = function(cardValues, $game) {
+  $game.empty();
+  for (valueIndex = 0; valueIndex < cardValues.length; valueIndex++) {
 
+  }
+
+  var $cardElement = $('<div class="col-3 mycard"></div>');
+  $cardElement.data(data);
 
 }
 /*
