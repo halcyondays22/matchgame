@@ -58,7 +58,7 @@ MatchGame.renderCards = function(cardValues, $game) {
       color: color
     };
 
-    var $cardElement = $('<div class="col-xs-3 card"></div>');
+    var $cardElement = $('<div class="col-3 card"></div>');
     $cardElement.data(data);
 
     $game.append($cardElement);
@@ -70,5 +70,8 @@ MatchGame.renderCards = function(cardValues, $game) {
  */
 
 MatchGame.flipCard = function($card, $game) {
+  if ($game.data('isFlipped')); {
+    return;
+  }
 
 }
