@@ -49,7 +49,7 @@ MatchGame.renderCards = function(cardValues, $game) {
 
   $game.empty();
 
-  for (valueIndex = 0; valueIndex < cardValues.length; valueIndex++) {
+  for (var valueIndex = 0; valueIndex < cardValues.length; valueIndex++) {
     var value = cardValues[valueIndex];
     var color = colors[value - 1];
     var data = {
@@ -57,12 +57,12 @@ MatchGame.renderCards = function(cardValues, $game) {
       isFlipped: false,
       color: color
     };
+
+    var $cardElement = $('<div class="col-xs-3 card"></div>');
+    $cardElement.data(data);
+
+    $game.append($cardElement);
   }
-
-  var $cardElement = $('<div class="col-3 mycard"></div>');
-  $cardElement.data(data);
-
-  $game.append($cardElement);
 }
 /*
   Flips over a given card and checks to see if two cards are flipped over.
